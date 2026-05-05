@@ -54,7 +54,7 @@ Expected result:
 ##  Screenshots
 
 ### Active Directory Structure
-![AD Structure](screenshots/ad_structure.png)
+![AD Structure](screenshots/structure.png)
 
 ### Users in Organizational Units
 ![Users](screenshots/users.png)
