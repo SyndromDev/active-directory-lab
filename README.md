@@ -49,7 +49,28 @@ DNS resolution test:
 Expected result:
 - Returns IP address of Domain Controller
 
+##  Group Policy (GPO)
+
+Basic Group Policy settings were applied on the domain:
+
+- Password policy configuration
+- Account lockout policy
+- Default domain policy adjustments
+
+These policies ensure basic security hardening of the environment.
+
 ---
+
+##  IP Addressing Scheme
+
+| Device        | IP Address       | Role                |
+|--------------|-----------------|--------------------|
+| DC-01        | 192.168.31.250  | Domain Controller   |
+| Windows 11   | 192.168.31.10   | Client Machine      |
+| Gateway      | 192.168.31.1    | Network Gateway     |
+
+Subnet Mask: 255.255.255.0
+DNS Server: 192.168.31.250
 
 ##  Screenshots
 
