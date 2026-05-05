@@ -5,6 +5,8 @@ This project demonstrates the deployment and configuration of a basic Active Dir
 
 The goal was to simulate a small company infrastructure with domain services, DNS, and user organization.
 
+##  Architecture Overview
+Client → DNS → Domain Controller → Active Directory
 ---
 
 ##  Environment
