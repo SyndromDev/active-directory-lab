@@ -80,6 +80,10 @@ Expected result:
 ### Server-client
 ![Server-client](screenshots/Server-client.png)
 
+## 🗺️ Network Diagram
+The diagram below shows the lab network architecture.
+![Diagram](screenshots/network_diagram.png)
+
 ---
 
 ##  Notes
