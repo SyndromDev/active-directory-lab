@@ -57,13 +57,28 @@ Expected result:
 ![AD Structure](screenshots/structure.png)
 
 ### Users in Organizational Units
-![Users](screenshots/users.png)
+![Users](screenshots/ActiveDirectory.png)
+
+### Users in IT (Helpdesk)
+![Helpdesk](screenshots/helpdesk.png)
+
+### Users in IT (Admins)
+![Admins](screenshots/SysAdmins.png)
+
+### Users in Employees
+![Employees](screenshots/Users.png)
 
 ### DNS Configuration
-![DNS](screenshots/dns.png)
+![DNS](screenshots/DNSmanager.png)
+
+### Company local
+![Company local](screenshots/companylocal.png)
 
 ### Domain Resolution Test
-![NSLookup](screenshots/nslookup.png)
+![NSLookup](screenshots/Name.png)
+
+### Server-client
+![Server-client](screenshots/Server-client.png)
 
 ---
 
