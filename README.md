@@ -1,69 +1,72 @@
 # Active Directory Home Lab
 
-##  Overview
-This project demonstrates the deployment and configuration of a basic Active Directory environment using Windows Server.
+## Обзор
+Этот проект демонстрирует развертывание и настройку базовой среды Active Directory с использованием Windows Server.
 
-The goal was to simulate a small company infrastructure with domain services, DNS, and user organization.
+Целью проекта было моделирование инфраструктуры небольшой компании с доменными службами, DNS и организацией пользователей.
 
-##  Architecture Overview
-Client → DNS → Domain Controller → Active Directory
+## Обзор архитектуры
+Клиент → DNS → Контроллер домена → Active Directory
+
 ---
 
-##  Environment
-- Windows Server (Domain Controller)
+## Окружение
+- Windows Server (контроллер домена)
 - VirtualBox / VMware
-- Windows 11 (Client - optional)
+- Windows 11 (клиент — опционально)
 
 ---
 
-##  Domain Information
-- Domain Name: **company.local**
-- Domain Controller: **DC-01**
+## Информация о домене
+- Имя домена: **company.local**
+- Контроллер домена: **DC-01**
 
 ---
 
-##  Configured Components
+## Настроенные компоненты
 
 ### Active Directory
-- Installed Active Directory Domain Services (AD DS)
-- Promoted server to Domain Controller
+- Установлены службы Active Directory Domain Services (AD DS)
+- Сервер повышен до роли контроллера домена
 
 ### DNS
-- Configured DNS server on DC
-- Created Forward Lookup Zone: `company.local`
-- Verified domain resolution
+- Настроен DNS-сервер на контроллере домена
+- Создана зона прямого просмотра: `company.local`
+- Проверено разрешение доменных имен
 
-### Organizational Structure
-- Created OUs:
+### Организационная структура
+- Созданы Organizational Units (OU):
   - IT
   - HR
   - Users
-- Created domain user accounts
+- Созданы учетные записи пользователей домена
 
 ---
 
-##  Verification
+## Проверка работоспособности
 
-DNS resolution test:
+Тест разрешения DNS:
+
 - nslookup company.local
 
-
-Expected result:
-- Returns IP address of Domain Controller
-
-##  Group Policy (GPO)
-
-Basic Group Policy settings were applied on the domain:
-
-- Password policy configuration
-- Account lockout policy
-- Default domain policy adjustments
-
-These policies ensure basic security hardening of the environment.
+Ожидаемый результат:
+- Возвращается IP-адрес контроллера домена
 
 ---
 
-##  IP Addressing Scheme
+## Group Policy (GPO)
+
+В домене были применены базовые настройки групповых политик:
+
+- Настройка политики паролей
+- Политика блокировки учетных записей
+- Изменения стандартной доменной политики
+
+Эти политики обеспечивают базовое усиление безопасности среды.
+
+---
+
+## Схема IP-адресации
 
 | Device        | IP Address       | Role                |
 |--------------|-----------------|--------------------|
@@ -71,48 +74,50 @@ These policies ensure basic security hardening of the environment.
 | Windows 11   | 192.168.31.10   | Client Machine      |
 | Gateway      | 192.168.31.1    | Network Gateway     |
 
-Subnet Mask: 255.255.255.0
-DNS Server: 192.168.31.250
+Маска подсети: 255.255.255.0  
+DNS-сервер: 192.168.31.250
 
-##  Screenshots
+---
 
-### Active Directory Structure
+## Скриншоты
+
+### Структура Active Directory
 ![AD Structure](screenshots/structure.png)
 
-### Users in Organizational Units
+### Пользователи в Organizational Units
 ![Users](screenshots/ActiveDirectory.png)
 
-### Users in IT (Helpdesk)
+### Пользователи в IT (Helpdesk)
 ![Helpdesk](screenshots/helpdesk.png)
 
-### Users in IT (Admins)
+### Пользователи в IT (Администраторы)
 ![Admins](screenshots/SysAdmins.png)
 
-### Users in Employees
+### Пользователи в Employees
 ![Employees](screenshots/Users.png)
 
-### DNS Configuration
+### Настройка DNS
 ![DNS](screenshots/DNSmanager.png)
 
-### Company local
+### company.local
 ![Company local](screenshots/companylocal.png)
 
-### Domain Resolution Test
+### Тест разрешения домена
 ![NSLookup](screenshots/Name.png)
 
-### Server-client
+### Сервер-клиент
 ![Server-client](screenshots/Server-client.png)
 
-## 🗺️ Network Diagram
-The diagram below shows the lab network architecture.
+##  Схема сети
+Диаграмма ниже показывает архитектуру лабораторной сети.
 ![Diagram](screenshots/network_diagram.png)
 
 ---
 
-##  Notes
-Domain join from client machine was not completed due to Windows edition limitations (Home edition).
+## Примечания
+Подключение клиентской машины к домену не было завершено из-за ограничений редакции Windows Home.
 
 ---
 
-##  Outcome
-Successfully deployed a functional Active Directory environment with DNS and organizational structure simulating a real-world company setup.
+## Результат
+Была успешно развернута рабочая среда Active Directory с DNS и организационной структурой, имитирующей инфраструктуру реальной компании.
